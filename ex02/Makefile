@@ -6,7 +6,7 @@
 #    By: corellan <corellan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/09 10:37:08 by corellan          #+#    #+#              #
-#    Updated: 2023/07/02 17:23:41 by corellan         ###   ########.fr        #
+#    Updated: 2023/07/02 17:45:31 by corellan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,11 +49,11 @@ $(NAME2) : $(OBJ2)
 		@echo "$(GREEN)Object file created.$(NC)"
 
 clean:
-		@rm -f $(OBJ)
+		@rm -f $(OBJ) $(OBJ2)
 		@echo "$(RED)Object files deleted$(NC)"
 
 fclean: clean
-		@rm -rf $(NAME)
+		@rm -rf $(NAME) $(NAME2)
 		@echo "$(RED)The binary was deleted successfully$(NC)"
 
 re: fclean all
