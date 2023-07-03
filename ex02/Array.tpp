@@ -6,7 +6,7 @@
 /*   By: corellan <corellan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/02 13:46:29 by corellan          #+#    #+#             */
-/*   Updated: 2023/07/03 12:48:48 by corellan         ###   ########.fr       */
+/*   Updated: 2023/07/03 12:54:01 by corellan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,8 +87,6 @@ Array<T>	&Array<T>::operator=(Array<T> const &rhs)
 			while (iter < size_rhs)
 			{
 				this->_array[iter] = (*temp)[iter];
-				std::cout << "Address of this->_array[" << iter << "] is " << &(this->_array[iter]) << std::endl;
-				std::cout << "And the address of (*temp)[" << iter << "] is " << &(*temp)[iter] << std::endl;
 				iter++;
 			}
 		}
