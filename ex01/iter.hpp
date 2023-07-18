@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   iter.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: corellan <corellan@student.42.fr>          +#+  +:+       +#+        */
+/*   By: corellan <corellan@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/01 19:21:11 by corellan          #+#    #+#             */
-/*   Updated: 2023/07/02 10:40:12 by corellan         ###   ########.fr       */
+/*   Created: 2023/07/18 09:55:31 by corellan          #+#    #+#             */
+/*   Updated: 2023/07/18 13:58:01 by corellan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <iostream>
 
 template<typename T>
-void	function(T member)
+void	function(T const &member)
 {
 	const std::type_info	&type = typeid(member);
 	std::string				typ;
@@ -32,7 +32,7 @@ void	function(T member)
 }
 
 template<typename T>
-void	iter(T	*array, size_t length, void	(*f)(T))
+void	iter(T	*array, size_t length, void	(*f)(T const &))
 {
 	size_t	i;
 
