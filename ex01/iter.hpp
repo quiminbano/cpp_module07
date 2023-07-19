@@ -6,7 +6,7 @@
 /*   By: corellan <corellan@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 09:55:31 by corellan          #+#    #+#             */
-/*   Updated: 2023/07/18 13:58:01 by corellan         ###   ########.fr       */
+/*   Updated: 2023/07/19 12:02:28 by corellan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,19 @@ void	function(T const &member)
 
 template<typename T>
 void	iter(T	*array, size_t length, void	(*f)(T const &))
+{
+	size_t	i;
+
+	i = 0;
+	while (i < length)
+	{
+		(*f)(array[i]);
+		i++;
+	}
+}
+
+template<typename T>
+void	iter(T	*array, size_t length, void	(*f)(T &))
 {
 	size_t	i;
 

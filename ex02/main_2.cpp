@@ -6,13 +6,13 @@
 /*   By: corellan <corellan@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 09:56:20 by corellan          #+#    #+#             */
-/*   Updated: 2023/07/18 09:56:22 by corellan         ###   ########.fr       */
+/*   Updated: 2023/07/19 11:59:17 by corellan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Array.hpp"
 
-#define MAX_ITER 10
+#define MAX_ITER 20000
 
 int	main(void)
 {
