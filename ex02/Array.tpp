@@ -6,7 +6,7 @@
 /*   By: corellan <corellan@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 09:56:11 by corellan          #+#    #+#             */
-/*   Updated: 2023/07/18 09:56:13 by corellan         ###   ########.fr       */
+/*   Updated: 2023/07/20 15:31:43 by corellan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,14 @@ unsigned int	Array<T>::size(void) const
 
 template<typename T>
 T	&Array<T>::operator[](unsigned int n)
+{
+	if (n >= this->_size)
+		throw (Array<T>::ErrorHappening());
+	return (this->_array[n]);
+}
+
+template<typename T>
+const T	&Array<T>::operator[](unsigned int n) const
 {
 	if (n >= this->_size)
 		throw (Array<T>::ErrorHappening());

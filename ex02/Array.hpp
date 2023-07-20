@@ -6,7 +6,7 @@
 /*   By: corellan <corellan@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 09:56:04 by corellan          #+#    #+#             */
-/*   Updated: 2023/07/18 09:56:05 by corellan         ###   ########.fr       */
+/*   Updated: 2023/07/20 14:34:38 by corellan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ public:
 
 	Array	&operator=(Array const &rhs);
 	T		&operator[](unsigned int n);
+	const T	&operator[](unsigned int n) const;
 
 	unsigned int	size(void) const;
 
